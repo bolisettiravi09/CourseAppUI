@@ -1,0 +1,21 @@
+<h2>Employee List</h2>
+<table class="table table-striped">
+  <tr>
+    <th>Course ID</th>
+    <th>Course Name</th>
+    <th>Skill Set</th>
+    <th>Price</th>
+    <th>New Course</th>
+
+  </tr>
+  <tbody>
+    <tr *ngFor="let crse of courses">
+      <td [ngStyle]="{'background-color':crse.newCourse?'blue':'','color':crse.newCourse?'white':''}">{{crse.courseID}}</td>
+      <td>{{crse.courseName}}</td>
+      <td>{{crse.level}}</td>
+      <td>{{crse.price}}</td>
+      <td>{{crse.newCourse}}</td>
+
+    </tr>
+  </tbody>
+</table>
